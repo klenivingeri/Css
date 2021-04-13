@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body
+{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+
+}
+
+.container
+{
+	position:  relative;
+	display:  flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	flex-wrap: wrap;
+	z-index: 1;
+}
+.container .skt
+{
+	position: relative;
+	width: 100px;
+	height: 350px;
+	margin: 30px 30px 20px 30px;
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+	border-radius: 75px;
+	background:  rgba(255, 255, 255, 0.1);
+	overflow: hidden; /* hidden não deixa o scroll aparecer, e tudo fica por dentro da div*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top:  1px solid rgba(255, 255, 255, 0.5);
+	border-left:  1px solid rgba(255, 255, 255, 0.5);
+}
+.container .card
+{
+	width: 200px;
+	height: 500px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+
+.container .card .content
+{
+	position: relative;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	align-items: center;
+
+	transform: translateY(50px);
+	opacity: 0;
+	transition: 0.5s;
+
+}
+
+.container .card:hover .content
+{
+	transform: translateY(0);
+	opacity: 1;
+
+
+}
+
+
+.container .card .content .car
+{
+ 	height: 100px;
+ 	width: 100%;
+ 	display:none;
+ 	opacity: 0;
+ 	transition: 0.5s;
+
+}
+
+.container .card .content:hover .car
+{
+
+	opacity: 1;
+
+
+ 	height: 100px;
+ 	width: 100%;
+ 	margin-bottom: 100px;
+
+ 	display:flex;
+ 	justify-content: center;
+ 	text-align: center;
+ 	align-items: center;
+ 	transform: translateY(-20px);
+
+ 	font-weight: 500;
+ 	font-size: 0.9rem;
+
+}
+
+.container .card .content .car a
+{
+	text-decoration: none;
+	color:  white;
+	height: 36px;
+	padding: 6px 10px 6px 10px;
+	border:  1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 17px;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+	background-color: black;
+
+
+}
+.container .card .content .car a:hover
+{
+	color:  black;
+	background-color: white;
+	border:  1px solid rgba(0, 0, 0, 0.5);
+	font-weight: 600;
+}
+
+
+.container .card .content h2
+{
+	font-size: 1rem;
+	text-align: center;
+
+
+}
+
+.container .card .content .price
+{
+	font-size: 1.5rem;
+	line-height: 20px;
+
+
+}
+.container .card .content .amount
+{
+	font-size: 0.8rem;
+
+}
