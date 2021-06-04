@@ -1,0 +1,23 @@
+*{
+  margin: 0px;
+}
+#fundo{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+#btn{
+  margin-top: 10px;
+  width: 200px;
+  height: 35px;
+}
+.ativo{
+  background: black;
+  color: white;
+}
+.desativado{
+  background: black;
+  height: 100%;
+}
+
