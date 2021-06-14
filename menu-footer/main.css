@@ -1,0 +1,35 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+nav{
+  height: 35px;
+}
+ul{
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li{
+  display: flex;
+  height: 35px;
+  padding: 0px 1px;
+  background-color: rgba(225,225,225,1);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms all;
+}
+ul li:hover{
+  background-color: rgba(190,190,190,1);
+  padding: 0 30px;
+}
