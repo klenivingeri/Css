@@ -5,12 +5,16 @@ body {
 a {
   color: #00B7FF;
 }
+.container {
+ margin: 0 auto;
+ width: 100%;
+ 
+}
 
-.galery{
+.container .galery{
   
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   text-align: center;
-  justify-content: center;
+
 }

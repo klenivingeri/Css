@@ -43,5 +43,18 @@ console.log(req.params.id)
 
 });
 
+router.get('/teste/:id', function(req, res, next) {
+
+  if(req.params.id == 'Lyon'){
+    res.status(200).json({
+      Nome: req.params.id,
+      msg: ' ok'
+    })
+  }else{
+    res.status(404).json({ msg: 'não foi informado nome correto' });
+  }
+  
+  });
+
 
 module.exports = router;
