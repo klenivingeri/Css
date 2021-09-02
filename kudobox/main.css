@@ -11,6 +11,7 @@ a{
   font-family:  sans-serif;
   font-family: 'Glory', sans-serif;
 }
+
 body{
   background-color: #63B3ED;
 }
@@ -21,17 +22,36 @@ header{
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  background: #EBF8FF
-  ;
+  background: #EBF8FF;
 }
+
 header .logo{
   border-radius: 30px;
+}
+
+header .kudocard{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 55px;
+}
+
+header .title{
+  display: flex;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+header .subtitle{
+ font-size: 0.9rem;
 }
 
 .div-select{
   width: 300px;
   overflow: hidden;
 }
+
 .div-select select {
   background: url(./img/seta.png) no-repeat #5faffa;
   background-position: 250px center;
@@ -46,9 +66,11 @@ header .logo{
   appearance: none;
   border:0px;
 }
+
 select::-ms-expand {
   display: none;
 } 
+
 .galery{
   max-width: 1085px;
   margin: 0 auto;
@@ -62,7 +84,7 @@ select::-ms-expand {
   height: 230px;
   width: 320px;
   position: relative;
-  display: none;
+  opacity: 0;
 }
 .galery .card-body{
 
@@ -78,13 +100,14 @@ select::-ms-expand {
 }
 
 .galery .card-body:hover{
-  top: -5px;
-  left: -5px;
+  top: -3px;
+  left: -3px;
+  font-size: 1rem;
   position:absolute;
   margin: 0 auto;
   box-shadow: 5px 10px 10px #3182CE;
-  height: 235px;
-  width: 330px;
+  height: 233px;
+  width: 327px;
   
 }
 .galery .card-body p {
@@ -94,19 +117,83 @@ select::-ms-expand {
 .galery .card-body p:nth-child(3n) {
   display: block;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.1rem;
   letter-spacing: .1rem;
   height: 130px;
   width: 280px;
 }
 
-
 .card.active{
-  display: block;
+  animation: on 0.5s  forwards;
 }
+@keyframes on {
+  0% { opacity: 0; }
+  99% { opacity: 1; }
+  100% { display:block; opacity: 1;}
+}
+
+.card.desactve{
+  animation: off 0.5s  forwards;
+}
+@keyframes off {
+  0% { opacity: 1; }
+  25% { opacity: 0; }
+  100% { display:none; 
+        opacity: 0; 
+        visibility:hidden;  
+        overflow-y: hidden;
+        position: absolute;
+      }
+}
+
+
 
 /*
 efeitos
 */
 
+.card-select{
 
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  height: 100vh;
+  width: 100%;
+  background:  rgb(0, 0,0, .3);
+}
+.card-select.show{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: on 0.5s  forwards;
+}
+
+
+.card-select .card-body{
+  font-size: 2rem;
+  height: 460px;
+  width: 640px;
+  top: 0;
+  left: 0;
+  padding: 6rem  1.5rem 0 2.5rem;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, .5);
+  transition: 0.3s;
+}
+
+
+.card-select .card-body p {
+  font-weight: bold;
+  margin: .2rem;
+}
+.card-select .card-body p:nth-child(3n) {
+  display: block;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  height: 230px;
+  width: 560px;
+}
