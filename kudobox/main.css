@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@200;300;400;500&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Glory', sans-serif;
+}
+a{
+  text-decoration: none;
+  font-family:  sans-serif;
+  font-family: 'Glory', sans-serif;
+}
+body{
+  background-color: #63B3ED;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #EBF8FF
+  ;
+}
+header .logo{
+  border-radius: 30px;
+}
+
+.div-select{
+  width: 300px;
+  overflow: hidden;
+}
+.div-select select {
+  background: url(./img/seta.png) no-repeat #5faffa;
+  background-position: 250px center;
+  width: 295px;
+  height: 48px;
+  border-radius: 7px;
+  font-size: 18px;
+  padding:  13px 10px 13px 12px;
+  color:#fff;
+  text-indent: 0.01px;
+  text-overflow: "";
+  appearance: none;
+  border:0px;
+}
+select::-ms-expand {
+  display: none;
+} 
+.galery{
+  max-width: 1085px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+  
+}
+.galery .card{ 
+  height: 230px;
+  width: 320px;
+  position: relative;
+  display: none;
+}
+.galery .card-body{
+
+  height: 230px;
+  width: 320px;
+  top: 0;
+  left: 0;
+  padding: 3rem  1.5rem 0 1.3rem;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 5px 5px 10px #3182CE;
+  transition: 0.3s;
+}
+
+.galery .card-body:hover{
+  top: -5px;
+  left: -5px;
+  position:absolute;
+  margin: 0 auto;
+  box-shadow: 5px 10px 10px #3182CE;
+  height: 235px;
+  width: 330px;
+  
+}
+.galery .card-body p {
+  font-weight: bold;
+  margin: .2rem;
+}
+.galery .card-body p:nth-child(3n) {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: .1rem;
+  height: 130px;
+  width: 280px;
+}
+
+
+.card.active{
+  display: block;
+}
+
+/*
+efeitos
+*/
+
+
